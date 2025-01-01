@@ -1,0 +1,65 @@
+/* Sayfalama stilinin genel yapısını özelleştirme */
+body .pagination {
+    justify-content: center !important; /* Sayfaları ortalamak */
+    margin-top: 20px !important; /* Üstte boşluk bırakma */
+    font-size: 16px !important; /* Yazı boyutunu belirleme */
+}
+
+/* Sayfa numarası bağlantıları */
+body .pagination .page-item a {
+    color: #000000 !important; /* Sayfa numarası renk */
+    text-decoration: none !important; /* Alt çizgiyi kaldırma */
+    padding: 8px 16px !important; /* Bağlantı içindeki boşluk */
+    border: 1px solid #ddd !important; /* Sayfa bağlantılarına kenarlık */
+    border-radius: 5px !important; /* Köşe yuvarlama */
+}
+
+/* Aktif sayfa bağlantısı */
+body .pagination .page-item.active a {
+    background-color: #000000 !important; /* Aktif sayfa arka plan rengi */
+    border-color: #000000 !important; /* Aktif sayfa kenarlık rengi */
+    color: white !important; /* Aktif sayfa yazı rengi */
+}
+
+/* Sayfa numarasına hover efekti */
+body .pagination .page-item a:hover {
+    color: #000000 !important; /* Hover rengi */
+    background-color: #f5f5f5 !important; /* Hover arka plan rengi */
+    border-color: #000000 !important; /* Hover kenarlık rengi */
+}
+
+/* Sayfa numarasının disable (pasif) olduğu durum */
+body .pagination .page-item.disabled a {
+    color: #ccc !important; /* Disable durumundaki renk */
+    pointer-events: none !important; /* Tıklanamaz yapma */
+}
+
+/* Sayfa numarası aktif olmayan diğer sayfalar için */
+body .pagination .page-item:not(.active):not(.disabled) a {
+    background-color: transparent !important; /* Sayfa numarası arka planını şeffaf yapma */
+    border-color: #ddd !important; /* Normal kenarlık rengi */
+}
+
+/* Sayfa numarası aktif olmayan diğer sayfalar için hover efekti */
+body .pagination .page-item:not(.active):not(.disabled) a:hover {
+    background-color: #e6e6e6 !important; /* Hover arka plan rengi */
+    color: #000000 !important; /* Hover yazı rengi */
+}
+
+/* Sayfalamadaki önceki ve sonraki butonlar */
+body .pagination .page-item .page-link {
+    color: #000000 !important; /* Renk değişikliği */
+    background-color: transparent !important; /* Arka planı şeffaf yapma */
+    border: none !important; /* Kenarlık kaldırma */
+}
+
+/* Sayfalama bağlantılarında kutu gölgesi ekleyerek daha belirgin yapma */
+body .pagination .page-item a,
+body .pagination .page-item.active a {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1) !important; /* Hafif gölge efekti */
+}
+
+/* Sayfa numarası kutularına geçiş animasyonu ekleme */
+body .pagination .page-item a {
+    transition: background-color 0.3s, color 0.3s !important; /* Arka plan ve yazı rengi geçişi */
+}
